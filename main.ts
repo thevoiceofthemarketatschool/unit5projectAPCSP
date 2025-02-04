@@ -1,4 +1,3 @@
-//hi stella :3
-//dfsdfkskfjnsekfjnse
-//ogga booga
-//ndjfnaejnfiajewnf
+//this is me :3
+
+//this section is for stella
