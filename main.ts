@@ -1,3 +1,1 @@
 let listofwords = ["", "", ""]
-//skasdasdasdasdda
-
