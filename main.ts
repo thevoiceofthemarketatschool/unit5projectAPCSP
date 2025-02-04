@@ -1,1 +1,1 @@
-let listofwords = ["", "", ""]
+let listofwords = ["gooo", "gea", "gaefwaef"]
