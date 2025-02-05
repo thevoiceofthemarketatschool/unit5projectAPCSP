@@ -1,4 +1,6 @@
-let listofwords = ["minecraft","iron","gold","diamond","emerald","redstone","lapis","netherite","copper","sword","pickaxe","axe","shovel","hoe","pig","golem","cat","wolf"]
+let listofwords = ["minecraft","iron","gold","diamond","emerald","redstone","lapis","netherite","copper","sword","pickaxe","axe","shovel","hoe","allay","armadillo","axolotl","bat","bee","camel","cat","chicken","cod","cow","dolphin","donkey","drowned","enderman","fox","frog","goat","golem","horse","mooshroom","mule","ocelot","parrot","pig","pufferfish","rabbit","salmon","sheep","sniffer","spider","squid","strider","tadpole","turtle","villager"]
+let listofdead = ["agent","batato"]
+
 
 // south of this line is stella's territory
 let playagain:boolean = true
@@ -28,3 +30,4 @@ while(playagain) {
         }
     }
 }
+
