@@ -67,5 +67,9 @@ while(playagain) {
         game.splash(randomentry)
         playagain = game.ask("play again?")
     }
+}  
+music.play(music.randomizeSound(music.createSoundEffect(WaveShape.Noise, 5000, 0, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Linear)), music.PlaybackMode.LoopingInBackground)
+
 }   
+
 
