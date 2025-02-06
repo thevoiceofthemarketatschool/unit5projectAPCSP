@@ -1,8 +1,5 @@
 let listofwords = ["minecraft","terraria","iron","stick","gold","diamond","leather","emerald","redstone","lapis","netherite","copper","coal","charcoal","amethyst","quartz","birch","oak","diorite","mangrove","magma","resin","sword","pickaxe","axe","shovel","hoe","allay","armadillo","axolotl","bat","bee","camel","cat","pigstep","chicken","cod","cow","dolphin","donkey","drowned","enderman","fox","frog","goat","golem","horse","mooshroom","mule","ocelot","parrot","pig","pufferfish","rabbit","salmon","sheep","sniffer","spider","squid","strider","tadpole","turtle","villager","llama","panda","piglin","wolf","blaze","bogged","breeze","creaking","creeper","guardian","endermite","evoker","ghast","hoglin","husk","phantom","pillager","ravager","shulker","silverfish","skeleton","slime","stray","vex","vindicator","warden","witch","zoglin","zombie","dragon","wither","ocean","forest","taiga","jungle","swamp","plains","desert","savanna","caves","void","nether","end","button","door","glass","pane","comparator","repeater","torch","lodestone","sandstone","banner","carpet","sign","leaves","bed","terracotta","concrete","sapling","stairs","trapdoor","wood","bricks","loom","planks","candle","fence","slab","stone","dirt","flowers","bamboo","cactus","fern","poppy","grass","rose","andesite","basalt","tuff","beacon","glowstone","lantern","shroomlight","rail","dispenser","hopper","lever","observer","piston","target","tripwire","anvil","barrel","furnace","composter","craft","mine","chest","grindstone","jukebox","lecturn","smoker","book","bookshelf","chain","obsidian","ice","prismarine","purpur","wool","sand","snow","netherrack","mushroom","chorus","bone","portal","spawner","deepslate","skulk","tnt","barrier","dripleaf","coral","kelp","vine","honey","egg","fire","boat","crossbow","potato","potion","string","bow","carrot","bucket","dye","bundle","bread","compass","cookie","elytra","helmet","chestplate","boots","leggings","disc","armor","mace","stew","sugar","wheat","steak","shield","pie","feather","enchant"]
 
-
-// south of this line is stella's territory
-
 //these are variables
 let playagain:boolean = true
 let failures: number = null
@@ -67,5 +64,6 @@ while(playagain) {
         game.splash(randomentry)
         playagain = game.ask("play again?")
     }
-}  
-music.play(music.randomizeSound(music.createSoundEffect(WaveShape.Noise, 5000, 0, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Linear)), music.PlaybackMode.LoopingInBackground)
+}
+game.splash("OK, enjoy some random sounds, lol.")
+game.onUpdateInterval(100, function () { music.play(music.randomizeSound(music.createSoundEffect(WaveShape.Noise, randint(200, 5000), randint(200, 5000), randint(20, 100), randint(20, 100), randint(200,1000), SoundExpressionEffect.None, InterpolationCurve.Linear)), music.PlaybackMode.UntilDone)})
