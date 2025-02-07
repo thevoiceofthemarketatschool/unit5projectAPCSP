@@ -61,7 +61,7 @@ while(playagain) {
     //this tells the player they lost if they run out of guesses, and prompt them to play again.
     if (failures > 6) {
         game.splash("dang, it looks like you got it wrong.")
-        game.splash(randomentry)
+        game.splash("your word was: "+randomentry+"!")
         playagain = game.ask("play again?")
     }
 }
