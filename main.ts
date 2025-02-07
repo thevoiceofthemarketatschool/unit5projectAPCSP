@@ -64,9 +64,6 @@ while(playagain) {
         game.splash(randomentry)
         playagain = game.ask("play again?")
     }
-}  
-music.play(music.randomizeSound(music.createSoundEffect(WaveShape.Noise, 5000, 0, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Linear)), music.PlaybackMode.LoopingInBackground)
-
 }
 game.splash("OK, enjoy some random sounds, lol.")
 game.onUpdateInterval(100, function () { music.play(music.randomizeSound(music.createSoundEffect(WaveShape.Noise, randint(200, 5000), randint(200, 5000), randint(20, 100), randint(20, 100), randint(200,1000), SoundExpressionEffect.None, InterpolationCurve.Linear)), music.PlaybackMode.UntilDone)})
