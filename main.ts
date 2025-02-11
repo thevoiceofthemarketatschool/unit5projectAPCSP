@@ -1,3 +1,4 @@
+//this fulfills the array requirement
 let listofwords = ["minecraft","steve","alex","herobrine","otherside","mellohi","terraria","iron","stick","gold","diamond","leather","emerald","redstone","lapis","netherite","copper","coal","charcoal","amethyst","quartz","birch","oak","diorite","mangrove","magma","resin","sword","pickaxe","axe","shovel","hoe","allay","armadillo","axolotl","bat","bee","camel","cat","pigstep","chicken","cod","cow","dolphin","donkey","drowned","enderman","fox","frog","goat","golem","horse","mooshroom","mule","ocelot","parrot","pig","pufferfish","rabbit","salmon","sheep","sniffer","spider","squid","strider","tadpole","turtle","villager","llama","panda","piglin","wolf","blaze","bogged","breeze","creaking","creeper","guardian","endermite","evoker","ghast","hoglin","husk","phantom","pillager","ravager","shulker","silverfish","skeleton","slime","stray","vex","vindicator","warden","witch","zoglin","zombie","dragon","wither","ocean","forest","taiga","jungle","swamp","plains","desert","savanna","caves","void","nether","end","button","door","glass","pane","comparator","repeater","torch","lodestone","sandstone","banner","carpet","sign","leaves","bed","terracotta","concrete","sapling","stairs","trapdoor","wood","bricks","loom","planks","candle","fence","slab","stone","dirt","flowers","bamboo","cactus","fern","poppy","grass","rose","andesite","basalt","tuff","beacon","glowstone","lantern","shroomlight","rail","dispenser","hopper","lever","observer","piston","target","tripwire","anvil","barrel","furnace","composter","craft","mine","chest","grindstone","jukebox","lecturn","smoker","book","bookshelf","chain","chainmail","skyblock","obsidian","ice","prismarine","purpur","wool","sand","snow","netherrack","mushroom","chorus","bone","portal","spawner","deepslate","skulk","tnt","barrier","dripleaf","coral","kelp","vine","honey","egg","fire","boat","crossbow","potato","potion","string","bow","carrot","bucket","dye","bundle","bread","compass","cookie","elytra","helmet","chestplate","boots","leggings","disc","armor","mace","stew","sugar","wheat","steak","shield","pie","feather","enchant"]
 //this is the background
 scene.setBackgroundImage(img`
@@ -132,6 +133,7 @@ let succeeded:boolean = null
 //this text explains the game rules.
 game.showLongText("This is a guessing game. It's hangman style, so you guess one letter at a time, and you can only get the letters wrong 6 times, and you fail on the seven. Only single words at a time, all lowercase, nouns only, and here's the kicker: its minecraft themed. Anything that would be 2 words has been shortened to 1.", DialogLayout.Bottom)
 // this function takes a string array and combines all the elements into one word, then returns it.
+//this fulfills the function with parameter requirement
 function calculateknown(model:string[]){
     let output = ""
     for (let i = 0; i < model.length; i++) {
@@ -140,6 +142,7 @@ function calculateknown(model:string[]){
     return output
 }
 //everything is in a while loop so that you can play the game again without being explained the rules again. 
+//this fulfills the boolean operator and while loop requirements
 while(playagain) {
     succeeded = false
     failures = 0
@@ -157,6 +160,7 @@ while(playagain) {
     while (failures<7 && !succeeded) {
         let matches = 0
         //this asks for a guess and stores it in a variable
+        //this also fulfills the user input requirement
         let guess = game.askForString(knownfull,1)
         
         //this compares their guess to each individual letter of the answer
@@ -169,6 +173,7 @@ while(playagain) {
             }
         
         //this checks if their guess was in the word, and increases failures if not 
+        //this also meets the conditional statement requirement and the output requirement
         if (matches < 1){
             failures++
             game.splash("Wrong, " + (7-failures) + " guesses left.")
@@ -181,6 +186,7 @@ while(playagain) {
         }
     }
     //this tells the player they lost if they run out of guesses, and prompt them to play again.
+    //it also counts as output
     if (failures > 6) {
         game.splash("dang, it looks like you got it wrong.")
         game.splash("your word was: "+randomentry+"!")
